@@ -21,7 +21,7 @@ get '/test-js' do
   "<html><head>
 <script type='text/javascript'>
 function afterLoad(){
-var thirdPartyUrl = 'http://ec2-23-20-231-145.compute-1.amazonaws.com:3000test-read';
+var thirdPartyUrl = 'http://ec2-23-20-231-145.compute-1.amazonaws.com:3000/test-read';
 window.setTimeout(function(){
  var ifrm = document.getElementById('ifrm');
  ifrm.src = thirdPartyUrl;
