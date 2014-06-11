@@ -5,7 +5,7 @@ get '/' do
 <a href='http://ec2-23-20-231-145.compute-1.amazonaws.com:3000/set-cookie' target='_blank'>Set 3rd party cookie in other window</a><br/>
 <a href='/read-test'>Test read in iframe</a><br/>
 <a href='http://ec2-23-20-231-145.compute-1.amazonaws.com:3000/test-redirect'>Test cookie via redirect</a><br/>
-<a href='http://ec2-23-20-231-145.compute-1.amazonaws.com:3000/clear-cookie'>clear 3rd party cookie<a>
+<a href='http://ec2-23-20-231-145.compute-1.amazonaws.com:3000/clear-cookie'>clear 3rd party cookie<a><br/>
 <a href='/test-js'>set cookie via third party js on page</a>
 "
 end
