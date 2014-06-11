@@ -22,7 +22,7 @@ get '/test-js' do
 <script type='text/javascript'>
 function afterLoad(){
 var thirdPartyUrl = 'http://ec2-23-20-231-145.compute-1.amazonaws.com:3000test-read';
-window.setTimeOut(function(){
+window.setTimeout(function(){
  var ifrm = document.getElementById('ifrm');
  ifrm.src = thirdPartyUrl;
 }, 10000);
