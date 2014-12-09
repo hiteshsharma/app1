@@ -1,10 +1,10 @@
 require 'sinatra'
-set :protection, :except => :frame_options
+set :ssl, true
 configure do
   mime_type :javascript, 'text/javascript'
 end
-
-app2Url = "http://127.0.0.1:4002";#http://ec2-23-20-231-145.compute-1.amazonaws.com:3000";
+#use Rack::SSL
+app2Url = "https://app2:4002";#http://ec2-23-20-231-145.compute-1.amazonaws.com:3000";
 get '/' do
   "<a href='/write-test'>Test Write in iframe</a><br/>
 <a href='" + app2Url + "/set-cookie' target='_blank'>Set 3rd party cookie in other window</a><br/>
@@ -26,6 +26,9 @@ get '/test-redirect' do
   redirect to(app2Url + "/test-redirect")
 end
 
+get '/another-route' do
+  "redirect succesful"
+end
 get '/test-js' do
   "<html><head>
 <script type='text/javascript'>
